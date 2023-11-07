@@ -1,4 +1,4 @@
-sssssssssssssssssssdocument.getElementById("cadastroForm").addEventListener("submit", function (event) {
+document.getElementById("cadastroForm").addEventListener("submit", function (event) {
     event.preventDefault();
     if (validateForm()) {
     }
@@ -39,13 +39,13 @@ function sendEmail() {
     E-mail: ${email}
     CEP: ${cep}
     Endereço: ${endereco}
+    Número: ${numero} 
     Sexo: ${sexo}
     Data de Nascimento: ${dataNascimento}
     Mensagem: ${mensagem}
     `;
-
-    console.window("Dados do formulário a serem enviados por e-mail:");
-    console.window(emailContent);
+    console.log("Dados do formulário a serem enviados por e-mail:");
+    console.log(emailContent);
 }
 
 function validateForm() {
@@ -55,6 +55,7 @@ function validateForm() {
     const email = document.getElementById("email").value;
     const cep = document.getElementById("cep").value;
     const endereco = document.getElementById("endereco").value;
+    const numero = document.getElementById("numero").value;
     const sexo = document.getElementById("sexo").value;
     const dataNascimento = document.getElementById("dataNascimento").value;
     const mensagem = document.getElementById("mensagem").value;
